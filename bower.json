@@ -1,0 +1,23 @@
+{
+    "name": "marchibbins.github.io",
+    "authors": [
+        "Marc Hibbins <marchibbins@gmail.com>"
+    ],
+    "version": "0.0.0",
+    "license": "CC-BY-SA-3.0",
+    "dependencies": {
+        "guss-colours": "~1",
+        "guss-css3": "~2",
+        "guss-forms": "~2",
+        "normalize-css": "~3.0.1",
+        "guss": "~2.0.0"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "private": true
+}
