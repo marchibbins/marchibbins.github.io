@@ -28,6 +28,17 @@ $text-color: $black;
 $link-color: $greenDark;
 $link-hover-color: $green;
 
+@mixin clearfix {
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 html {
     @include f-textSans;
 }
@@ -39,9 +50,18 @@ body {
     color: $text-color;
 }
 
-h1, h2, h3 {
-    @include fs-headline(9);
-    @include f-headlineSans;
+h1 {
+    @include fs-headline(9, true);
+    font-weight: 300;
+}
+
+h2 {
+    @include fs-headline(8, true);
+    font-weight: 300;
+}
+
+h3 {
+    @include fs-headline(7, true);
     font-weight: 300;
 }
 
@@ -57,7 +77,6 @@ a {
         text-decoration: underline;
     }
 }
-
 
 .site-header {
     background: $header-color;
@@ -75,4 +94,24 @@ a {
     @include gs-container;
     padding-left: $gs-gutter;
     padding-right: $gs-gutter;
+}
+
+.project {
+    @include clearfix;
+    margin-bottom: $gs-baseline*2;
+
+    .project__title {
+        margin-top: 0;
+    }
+
+    .project__image {
+        float: left;
+        width: gs-span(8);
+    }
+
+    .project__info {
+        float: left;
+        margin-left: $gs-gutter;
+        width: gs-span(8);
+    }
 }
