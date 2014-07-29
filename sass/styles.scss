@@ -98,13 +98,14 @@ a {
 }
 
 .site-footer {
+    @include fs-bodyCopy(1, true);
     background-color: $beige;
     padding-bottom: $gs-baseline*4;
     padding-top: $gs-baseline*2;
+    text-align: right;
 
     a {
         color: $blue;
-        @include fs-bodyCopy(2, true);
     }
 }
 
