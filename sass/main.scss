@@ -15,18 +15,18 @@
 $f-sans-serif-text: 'Open Sans', Helvetica, Arial, sans-serif;
 $f-sans-serif-headline: $f-sans-serif-text;
 
-$purple: #504375;
-$purpleDark: #39324d;
-$red: #c22557;
-$pink: #ed5887;
-$pinkLight: #ffE8ef;
+$pink: #ff3d83;
+$blue: #351c43;
+$green: #9ad1b2;
+$greenDark: #63BfA8;
+$mushroom: #f9e9b5;
 $black: #333;
 $white: #fff;
 
-$header-color: $purple;
+$header-color: $pink;
 $text-color: $black;
-$link-color: $red;
-$link-hover-color: $pink;
+$link-color: $greenDark;
+$link-hover-color: $green;
 
 html {
     @include f-textSans;
@@ -56,11 +56,12 @@ a {
         color: $link-hover-color;
         text-decoration: underline;
     }
-
 }
+
 
 .site-header {
     background: $header-color;
+    background: linear-gradient(to bottom, $header-color 0%, darken($header-color, 15%) 100%);
     height: gs-height(4);
     padding-top: $gs-baseline*2;
     padding-bottom: $gs-baseline*2;
