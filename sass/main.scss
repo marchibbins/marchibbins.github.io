@@ -12,10 +12,6 @@ $mq-show-breakpoints: (mobile, tablet, desktop);
 
 @import 'normalize';
 
-$font-sizes: (
-    18 24
-);
-
 $f-sans-serif-text: 'Open Sans', Helvetica, Arial, sans-serif;
 $f-sans-serif-headline: $f-sans-serif-text;
 
@@ -24,11 +20,15 @@ html {
 }
 
 body {
-    @include font-size(18, 24);
+    @include fs-bodyCopy(3);
+    font-family: $f-sans-serif-text;
+    font-weight: 400;
 }
 
 h1, h2, h3 {
+    @include fs-headline(9);
     @include f-headlineSans;
+    font-weight: 300;
 }
 
 .site-header {
