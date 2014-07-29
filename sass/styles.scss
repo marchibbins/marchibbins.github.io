@@ -83,7 +83,9 @@ a {
 /* Projects */
 .project {
     @include clearfix;
-    margin-bottom: $gs-baseline*2;
+    border-bottom: 1px solid $beige;
+    padding-bottom: $gs-baseline*2 - 1;
+    margin-bottom: $gs-baseline*4;
 
     .project__image {
         margin-bottom: $gs-baseline;
