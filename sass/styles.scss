@@ -1,0 +1,85 @@
+/* Default element styles */
+html {
+    @include f-textSans;
+}
+
+body {
+    @include fs-bodyCopy(3, true);
+    color: $text-color;
+}
+
+h1 {
+    @include fs-headline(9, true);
+    font-weight: 300;
+}
+
+h2 {
+    @include fs-headline(8, true);
+    font-weight: 300;
+}
+
+h3 {
+    @include fs-headline(7, true);
+    font-weight: 300;
+}
+
+a {
+    color: $link-color;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+/* Layout */
+.container {
+    @include gs-container;
+    padding-left: $gs-gutter;
+    padding-right: $gs-gutter;
+}
+
+.site-header {
+    background: $header-color;
+    background: linear-gradient(to bottom, $header-color 0%, darken($header-color, 15%) 100%);
+    color: $white;
+    height: gs-height(4);
+    padding-top: $gs-baseline*2;
+    padding-bottom: $gs-baseline*2;
+}
+
+.site-footer {
+    background-color: $beige;
+    padding-bottom: $gs-baseline*4;
+    padding-top: $gs-baseline*2;
+
+    a {
+        color: $blue;
+        @include fs-bodyCopy(2, true);
+    }
+}
+
+/* Projects */
+.project {
+    @include clearfix;
+    margin-bottom: $gs-baseline*2;
+
+    .project__title {
+        margin-top: 0;
+    }
+
+    .project__image {
+        float: left;
+        width: gs-span(8);
+    }
+
+    .project__info {
+        float: left;
+        margin-left: $gs-gutter;
+        width: gs-span(8);
+    }
+}
