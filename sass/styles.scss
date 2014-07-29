@@ -65,8 +65,31 @@ a {
     background: linear-gradient(to bottom, $header-color 0%, darken($header-color, 15%) 100%);
     color: $white;
     height: gs-height(4);
-    padding-top: $gs-baseline*2;
+    padding-top: $gs-baseline;
     padding-bottom: $gs-baseline*2;
+
+    .site-header__title {
+        margin-bottom: $gs-baseline;
+        padding-right: 60px + $gs-gutter;
+    }
+
+    .site-header__subtitle {
+        @extend h3;
+        margin-top: 0;
+    }
+
+    .site-header__link {
+        color: $white;
+        float: right;
+        display: block;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        text-indent: -9999px;
+        background: transparent url(/images/github.png);
+        background-size: 60px;
+        margin-top: -32px;
+    }
 }
 
 .site-footer {
@@ -89,7 +112,6 @@ a {
 
     &:first-child {
         border-top: none;
-        padding-top: 0;
     }
 
     .project__image {
