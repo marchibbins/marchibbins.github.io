@@ -38,9 +38,26 @@ a {
 
 /* Layout */
 .container {
-    @include gs-container;
+    position: relative;
+    margin: 0 auto;
     padding-left: $gs-gutter;
     padding-right: $gs-gutter;
+
+    @include rem((
+        max-width: gs-span(8) + $gs-gutter*2
+    ));
+
+    @include mq(tablet) {
+        @include rem((
+            max-width: gs-span(10) + $gs-gutter*2
+        ));
+    }
+
+    @include mq(desktop) {
+        @include rem((
+            max-width: gs-span(12) + $gs-gutter*2
+        ));
+    }
 }
 
 .site-header {
@@ -68,18 +85,22 @@ a {
     @include clearfix;
     margin-bottom: $gs-baseline*2;
 
+    .project__image {
+        margin-bottom: $gs-baseline;
+        max-width: 100%;
+
+        @include mq(tablet) {
+            float: left;
+            margin-right: $gs-gutter;
+            width: gs-span(5);
+        }
+
+        @include mq(desktop) {
+            width: gs-span(6);
+        }
+    }
+
     .project__title {
         margin-top: 0;
-    }
-
-    .project__image {
-        float: left;
-        width: gs-span(8);
-    }
-
-    .project__info {
-        float: left;
-        margin-left: $gs-gutter;
-        width: gs-span(8);
     }
 }
