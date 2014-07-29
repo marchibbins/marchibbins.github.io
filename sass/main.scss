@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+
+$mq-show-breakpoints: (mobile, tablet, desktop);
+@import 'sass-mq/_mq';
+
+@import 'guss-rem/_rem';
+@import 'guss-grid-system/_grid-system';
+@include grid-system;
+
+@import 'guss-typography/_typography';
+@include guss-typography-defaults;
+
+@import 'normalize';
+
+$font-sizes: (
+    18 24
+);
+
+$f-sans-serif-text: 'Open Sans', Helvetica, Arial, sans-serif;
+$f-sans-serif-headline: $f-sans-serif-text;
+
+html {
+    @include f-textSans;
+}
+
+body {
+    @include font-size(18, 24);
+}
+
+h1, h2, h3 {
+    @include f-headlineSans;
+}
+
+.site-header {
+    background: skyblue;
+    height: gs-height(4);
+    padding-top: $gs-baseline*2;
+    padding-bottom: $gs-baseline*2;
+}
+
+.container {
+    @include gs-container;
+    padding-left: $gs-gutter;
+    padding-right: $gs-gutter;
+}
