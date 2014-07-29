@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-$mq-show-breakpoints: (mobile, tablet, desktop);
+// $mq-show-breakpoints: (mobile, tablet, desktop);
 @import 'sass-mq/_mq';
 
 @import 'guss-rem/_rem';
@@ -15,6 +15,11 @@ $mq-show-breakpoints: (mobile, tablet, desktop);
 $f-sans-serif-text: 'Open Sans', Helvetica, Arial, sans-serif;
 $f-sans-serif-headline: $f-sans-serif-text;
 
+$text-color: #333;
+$link-color: #c22557;
+$link-hover-color: #ed5887;
+$header-color: #504375;
+
 html {
     @include f-textSans;
 }
@@ -23,6 +28,7 @@ body {
     @include fs-bodyCopy(3);
     font-family: $f-sans-serif-text;
     font-weight: 400;
+    color: $text-color;
 }
 
 h1, h2, h3 {
@@ -31,11 +37,28 @@ h1, h2, h3 {
     font-weight: 300;
 }
 
+a {
+    color: $link-color;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+    }
+
+}
+
 .site-header {
-    background: skyblue;
+    background: $header-color;
     height: gs-height(4);
     padding-top: $gs-baseline*2;
     padding-bottom: $gs-baseline*2;
+}
+
+.site-header {
+    color: white;
 }
 
 .container {
