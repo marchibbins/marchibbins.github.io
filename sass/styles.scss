@@ -64,31 +64,36 @@ a {
     background: $header-color;
     background: linear-gradient(to bottom, $header-color 0%, darken($header-color, 15%) 100%);
     color: $white;
-    height: gs-height(4);
+    min-height: gs-height(4);
     padding-top: $gs-baseline;
     padding-bottom: $gs-baseline*2;
 
     .site-header__title {
         margin-bottom: $gs-baseline;
-        padding-right: 60px + $gs-gutter;
     }
 
     .site-header__subtitle {
         @extend h3;
         margin-top: 0;
+        margin-bottom: 0;
     }
 
     .site-header__link {
+        @include fs-bodyCopy(2, true);
         color: $white;
-        float: right;
         display: block;
-        width: 60px;
-        height: 60px;
-        overflow: hidden;
-        text-indent: -9999px;
-        background: transparent url(/images/github.png);
-        background-size: 60px;
-        margin-top: -32px;
+        margin-top: $gs-baseline;
+
+        @include mq(400px) {
+            background: transparent url(/images/github.png) top left no-repeat;
+            background-size: 60px;
+            float: right;
+            height: 60px;
+            margin-top: -32px;
+            overflow: hidden;
+            text-indent: -9999px;
+            width: 60px;
+        }
     }
 }
 
