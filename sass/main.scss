@@ -15,10 +15,18 @@
 $f-sans-serif-text: 'Open Sans', Helvetica, Arial, sans-serif;
 $f-sans-serif-headline: $f-sans-serif-text;
 
-$text-color: #333;
-$link-color: #c22557;
-$link-hover-color: #ed5887;
-$header-color: #504375;
+$purple: #504375;
+$purpleDark: #39324d;
+$red: #c22557;
+$pink: #ed5887;
+$pinkLight: #ffE8ef;
+$black: #333;
+$white: #fff;
+
+$header-color: $purple;
+$text-color: $black;
+$link-color: $red;
+$link-hover-color: $pink;
 
 html {
     @include f-textSans;
@@ -46,6 +54,7 @@ a {
     &:focus,
     &:active {
         color: $link-hover-color;
+        text-decoration: underline;
     }
 
 }
@@ -58,7 +67,7 @@ a {
 }
 
 .site-header {
-    color: white;
+    color: $white;
 }
 
 .container {
