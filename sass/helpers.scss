@@ -11,3 +11,11 @@
         clear: both;
     }
 }
+
+.hide-on-mobile {
+    display: none !important;
+
+    @include mq(tablet) {
+        display: block !important;
+    }
+}
