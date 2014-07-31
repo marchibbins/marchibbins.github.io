@@ -134,7 +134,7 @@ img {
         margin-bottom: $gs-baseline;
 
         @include mq(400px) {
-            background: transparent url(/images/github-white.png) top left no-repeat;
+            background: transparent url(/images/github.png) top left no-repeat;
             background-size: $github-logo-size;
             float: right;
             height: $github-logo-size;
@@ -147,18 +147,11 @@ img {
 }
 
 .site-footer {
-    @include fs-bodyCopy(1, true);
+    @include fs-headline(4, true);
+    font-weight: 400;
     background-color: $footer-color;
-    padding-bottom: $gs-baseline*4;
-    padding-top: $gs-baseline*2;
-
-    .inline-list__item {
-        &:before {
-            content: '·';
-            margin-left: $gs-gutter/4;
-            margin-right: $gs-gutter/4;
-        }
-    }
+    padding-bottom: $gs-baseline*6;
+    padding-top: $gs-baseline*4;
 
     .site-footer__link {
         color: $footer-link-color;
