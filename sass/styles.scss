@@ -167,12 +167,17 @@ img {
 
 .projects {
     margin-top: $gs-baseline*2;
-    margin-bottom: $gs-baseline;
+    margin-bottom: $gs-baseline*4;
 
     .projects__title {
         border-bottom: 1px solid $border-color;
         margin-bottom: $gs-baseline*2;
         padding-bottom: $gs-baseline - 1;
+    }
+
+    > .l-row:last-child .project {
+        border-bottom: none;
+        padding-bottom: 0;
     }
 }
 
@@ -184,9 +189,32 @@ img {
         margin-bottom: $gs-baseline;
         margin-top: $gs-baseline;
     }
+
+    .project__title--featured {
+        @include fs-headline(6, true);
+    }
+
+    .project__description {
+        @include rem((
+            line-height: 28px
+        ));
+    }
+
+    .project__link {
+        &:after {
+            content: '→';
+        }
+    }
 }
 
 .keyword {
     background-color: $keyword-color;
+    color: $text-color;
     padding: 2px 4px;
+}
+
+.permalink {
+    font-size: 0;
+    float: left;
+    margin-top: -$gs-baseline;
 }

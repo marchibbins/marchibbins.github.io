@@ -4,8 +4,8 @@ $f-sans-serif-text: 'Open Sans', Helvetica, Arial, sans-serif;
 /* Colours */
 $pink: #ff3d83;
 $blue: #351c43;
-$green: #9ad1b2;
-$greenDark: #63BfA8;
+$green: darken(#9ad1b2, 20%);
+$greenDark: darken(#63BfA8, 20%);
 $beige: #f9e9b5;
 $black: #333;
 $white: #fff;
